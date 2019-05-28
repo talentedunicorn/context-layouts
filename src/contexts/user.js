@@ -16,6 +16,8 @@ export const UserContextProvider = props => {
 
   const deauthenticateUser = _ => {
     console.log('Deauthenticating user')
+    window.localStorage.removeItem('token') 
+    setUser()
   }
 
   useEffect(() => {

@@ -9,6 +9,8 @@ const AppLayout = (props, context) =>
       <div className="App-layout">
         <header>
           <h1>App layout</h1>
+          <p>Logged in as {contextValue.user}</p>
+          <button onClick={() => contextValue.deauthenticateUser()}>Logout</button>
         </header>
         {props.children}
       </div>
